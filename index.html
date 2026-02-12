@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>STARBUDS — WEED Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="badge">PAY ON DELIVERY (COD)</div>
+      <div class="hours">Open 7 days/week • 8:00 AM – 12:00 AM</div>
+      <a class="call" href="tel:+16043653943">Call to Order: Hakim (604-365-3943)</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>STARBUDS</h1>
+        <p class="subtitle">Daily essentials delivered. Add items to cart → checkout → we coordinate delivery status with you.</p>
+
+        <div class="owner-card">
+          <div class="owner-title">Store Owner</div>
+          <div class="owner-name">Hakim</div>
+          <div class="owner-phone">
+            <a href="tel:+16043653943">604-365-3943</a>
+            <span class="sep">•</span>
+            <a href="#checkout" id="jumpCheckout">Go to Checkout</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Replace the image path with your own photo file name -->
+        <img class="hero-image" src="images/hero.jpg" alt="STARBUDS" onerror="this.style.display='none';document.getElementById('heroFallback').style.display='block';" />
+        <div id="heroFallback" class="hero-fallback" style="display:none;">
+          Add an image at <b>images/hero.jpg</b> (optional).
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-section">
+      <div class="section-head">
+        <h2>Shop WEED</h2>
+        <div class="search-row">
+          <input id="search" type="search" placeholder="Search products (e.g., WHITE RHINO,DEATH BUBBA,TUNA KHUSH,PURPLE KHUSH)..." />
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="WEED">WEED</option>
+            <option value="Beverages">Beverages</option>
+            <option value="Home">Home</option>
+            <option value="Personal Care">Personal Care</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="productGrid" class="product-grid" aria-live="polite"></div>
+    </section>
+
+    <aside class="cart">
+      <div class="cart-head">
+        <h3>Your Cart</h3>
+        <button id="clearCart" class="btn ghost" type="button">Clear</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Items</span>
+          <strong id="cartCount">0</strong>
+        </div>
+        <div class="summary-row">
+          <span>Total</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+        <div class="note">
+          Payment mode: <b>Pay on Delivery (COD)</b><br/>
+          After checkout, our team will coordinate delivery status with you.
+        </div>
+        <a href="#checkout" class="btn primary full">Checkout</a>
+      </div>
+    </aside>
+
+    <section id="checkout" class="checkout">
+      <h2>Checkout (Pay on Delivery)</h2>
+      <p class="small">
+        Fill your details so our team can contact you and coordinate delivery status.
+        <b>No online payment.</b>
+      </p>
+
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <div class="form-grid">
+          <label>
+            Full Name
+            <input id="custName" name="name" type="text" placeholder="Your name" required />
+          </label>
+
+          <label>
+            Phone Number
+            <input id="custPhone" name="phone" type="tel" placeholder="e.g., 604-000-0000" required />
+          </label>
+
+          <label class="span-2">
+            Delivery Address
+            <input id="custAddress" name="address" type="text" placeholder="Street, City, Postal Code" required />
+          </label>
+
+          <label class="span-2">
+            Delivery Notes (optional)
+            <textarea id="custNotes" name="notes" rows="3" placeholder="Buzzer code, instructions, preferred delivery time..."></textarea>
+          </label>
+        </div>
+
+        <div class="order-preview">
+          <div class="preview-title">Order Summary</div>
+          <pre id="orderSummary" class="summary-box">Your cart is empty.</pre>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Place Order</button>
+          <a class="btn ghost" href="tel:+16043653943">Or Call Hakim to Order</a>
+        </div>
+
+        <div id="success" class="success" role="status" aria-live="polite" hidden></div>
+      </form>
+
+      <div class="footer-card">
+        <div>
+          <div class="footer-title">Contact</div>
+          <div>Owner: <b>Hakim</b></div>
+          <div>Phone: <a href="tel:+16043653943">604-365-3943</a></div>
+          <div>Hours: 7 days/week • 8:00 AM – 12:00 AM</div>
+        </div>
+        <div class="tiny">
+          Tip: To add product photos, upload images to the <b>images/</b> folder and keep filenames same as in <b>app.js</b>.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> STARBUDS</span>
+      <span class="dot">•</span>
+      <span>Pay on Delivery (COD)</span>
+      <span class="dot">•</span>
+      <a href="tel:+16043653943">Call Hakim: 604-365-3943</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
