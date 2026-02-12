@@ -7,10 +7,10 @@ const STORE = {
 
 
 const PRODUCTS = [
-  { id: "p1", name: "WHITE RHINO", price: 10/GRAM, category: "INDICA", img: "images/milk.jpg" },
-  { id: "p2", name: "DEATH BUBBA", price: 30/3.5GRAM, category: "INDICA", img: "images/bread.jpg" },
-  { id: "p3", name: "TUNA KHUSH", price: 50/QUATER OUNCE, category: "INDICA", img: "images/eggs.jpg" },
-  { id: "p4", name: "PURPLE KHUSH", price: 100/HALF OUNCE, category: "INDICA", img: "images/rice.jpg" },
+  { id: "p1", name: "WHITE RHINO", price: 10/GRAM, category: "INDICA", img: "images/WHITE RHINO.jpg" },
+  { id: "p2", name: "DEATH BUBBA", price: 30/3.5GRAM, category: "INDICA", img: "images/DEATH BUBBA.jpg" },
+  { id: "p3", name: "TUNA KHUSH", price: 50/QUATER OUNCE, category: "INDICA", img: "images/TUNA KHUSH.jpg" },
+  { id: "p4", name: "PURPLE KHUSH", price: 100/HALF OUNCE, category: "INDICA", img: "images/PURPLE KHUSH.jpg" },
 
 
 
